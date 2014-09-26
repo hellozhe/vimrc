@@ -108,11 +108,11 @@ let Tlist_File_Fold_Auto_Close = 1             "自动折叠
 let Tlist_Show_One_File = 1                    "只显示当前文件的tags
 let Tlist_Exit_OnlyWindow = 1                  "如果Taglist窗口是最后一个窗口则退出Vim
 
-"通过快捷键<F10>开关Taglist
-nnoremap <silent> <F10> :Tlist<CR>
+"通过快捷键<F5>开关Taglist
+nnoremap <silent> <F5> :Tlist<CR>
 
-"通过快捷键<F9>开关NERDTree
-nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+"通过快捷键<F4>开关NERDTree
+nnoremap <silent> <F4> :NERDTreeTabsToggle<CR>
 
 "通过快捷键<F8>切换窗口
 nnoremap <silent> <F8> <C-W>w
@@ -164,12 +164,15 @@ let g:miniBufExplModSelTarget = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "加载语法模板和作者,时间信息[非插入模式]
 function MyInfo()
-    call append(0, "#!/usr/bin/env python")
-    call append(1, "#-*- coding:utf-8 -*-")
-    call append(2, "")
-    call append(3, "# FileName: ".expand("%"))
-    call append(4, "# Date: ".strftime("%c"))
-    call append(5, "# Author: Dong Guo")
+    call append(0, "#!/usr/bin/env perl")
+    call append(1, "")
+    call append(2, "# FileName: ".expand("%"))
+    call append(3, "# Date: ".strftime("%c"))
+    call append(4, "# Author: xiaozhezhu")
+    call append(5, "")
+    call append(6, "use warnings;")
+    call append(7, "use strict;")
+    call append(8, "use Smart::Comments")
 endf
 
 function MyMain() 
